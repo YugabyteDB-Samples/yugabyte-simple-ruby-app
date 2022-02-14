@@ -47,7 +47,7 @@ Note, you can easily find all the settings on the Yugabyte Cloud dashboard:
 
 2. Replace `{path-to-libpq}` with the path to the libpq installation and install [Ruby Pg](https://github.com/ged/ruby-pg):
     ```bash
-    gem install pg -- --with-pg-include={path-to-libpq}/opt/libpq/include --with-pg-lib={path-to-libpq}/libpq/lib
+    gem install pg -- --with-pg-include={path-to-libpq}/libpq/include --with-pg-lib={path-to-libpq}/libpq/lib
     ```
 
     Find alternative installation instructions [here](https://github.com/ged/ruby-pg#label-How+To+Install).
