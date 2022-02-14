@@ -8,7 +8,7 @@ If you use a different type of deployment, then update the `sample-app.rb` file 
 
 * Ruby 3.1 or later.
 * OpenSSL 1.1.1 or later (used by libpq and Ruby Pg to establish SSL connections).
-* [libpq](https://docs.yugabyte.com/latest/reference/drivers/ysql-client-drivers/#libpq) - the official PostgreSQL driver for C (required by the Ruby Pg driver).
+* [libpq](https://docs.yugabyte.com/latest/reference/drivers/ysql-client-drivers/#libpq) - the official PostgreSQL driver for C (required by Ruby Pg).
 * [Ruby Pg](https://github.com/ged/ruby-pg) - the official Ruby driver for PostgreSQL.
 * Command line tool or your favourite IDE, such as Visual Studio Code.
 
