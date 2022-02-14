@@ -32,7 +32,7 @@ Locate and define the following connection parameters in the `sample-app.rb` fil
 * `host` - the hostname of your YugabyteDB Cloud instance.
 * `user` - the username for your database.
 * `password` - the password for your database.
-* `sslmode`  - make sure it's set to `verify-full`.
+* `sslmode`  - an SSL mode. Make sure it's set to `verify-full`.
 * `sslrootcert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`). 
 
 Note, you can easily find all the settings on the Yugabyte Cloud dashboard:
