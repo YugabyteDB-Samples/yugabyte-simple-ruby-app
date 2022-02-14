@@ -50,7 +50,7 @@ Note, you can easily find all the settings on the Yugabyte Cloud dashboard:
     gem install pg -- --with-pg-include={path-to-libpq}/opt/libpq/include --with-pg-lib={path-to-libpq}/libpq/lib
     ```
 
-    Find alternate installation instructions [here](https://github.com/ged/ruby-pg#label-How+To+Install).
+    Find alternative installation instructions [here](https://github.com/ged/ruby-pg#label-How+To+Install).
 
 4. Make the application file executable:
     ```bash
