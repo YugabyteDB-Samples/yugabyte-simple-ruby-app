@@ -1,10 +1,10 @@
 # Simple Ruby Application for YugabyteDB
 
 This application connects to your YugabyteDB instance via the 
-[Ruby Pg](https://github.com/ged/ruby-pg) driver for PostgreSQL and performs basic SQL operations. The instructions below are provided for [Yugabyte Cloud](https://cloud.yugabyte.com/) deployments. 
+[Ruby Pg](https://github.com/ged/ruby-pg) driver for PostgreSQL and performs basic SQL operations. The instructions below are provided for [YugabyteDB Managed](https://cloud.yugabyte.com/) deployments. 
 If you use a different type of deployment, then update the `sample-app.rb` file with proper connection parameters.
 
-## Prerequisite
+## Prerequisites
 
 * Ruby 3.1 or later.
 * OpenSSL 1.1.1 or later (used by libpq and Ruby Pg to establish SSL connections).
@@ -12,9 +12,9 @@ If you use a different type of deployment, then update the `sample-app.rb` file 
 * [Ruby Pg](https://github.com/ged/ruby-pg) - the official Ruby driver for PostgreSQL.
 * Command line tool or your favourite IDE, such as Visual Studio Code.
 
-## Start Yugabyte Cloud Cluster
+## Start YugabyteDB Managed Cluster
 
-* [Start YugabyteDB Cloud](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. You can use
+* [Start YugabyteDB Managed](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. You can use
 the free tier at no cost.
 * Add an IP address of your machine/laptop to the [IP allow list](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-secure-clusters/add-connections/#manage-ip-allow-lists)
 
@@ -26,16 +26,16 @@ Clone the repository and change dirs into it:
 git clone https://github.com/yugabyte/yugabyte-simple-ruby-app && cd yugabyte-simple-ruby-app
 ```
 
-## Provide Yugabyte Cloud Connection Parameters
+## Provide Cluster Connection Parameters
 
 Locate and define the following connection parameters in the `sample-app.rb` file:
-* `host` - the hostname of your YugabyteDB Cloud instance.
+* `host` - the hostname of your instance.
 * `user` - the username for your database.
 * `password` - the password for your database.
 * `sslmode`  - an SSL mode. Make sure it's set to `verify-full`.
 * `sslrootcert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`). 
 
-Note, you can easily find all the settings on the Yugabyte Cloud dashboard:
+Note, you can easily find all the settings on the YugabyteDB Managed dashboard:
 
 ![image](resources/cloud-app-settings.png)
 
@@ -79,13 +79,13 @@ name=John, age=28, country=Canada, balance=9800
 
 ## Explore Application Logic
 
-Congrats! You've successfully executed a simple Ruby app that works with Yugabyte Cloud.
+Congrats! You've successfully executed a simple Ruby app that works with YugabyteDB.
 
 Now, explore the source code of `sample-app.rb`:
 1. `connect` function - establishes a connection with your cloud instance via the Ruby Pg driver.
-3. `create_database` function - creates a table and populates it with sample data.
-4. `select_accounts` function - queries the data with SQL `SELECT` statements.
-5. `transfer_money_between_accounts` function - updates records consistently with distributed transactions.
+2. `create_database` function - creates a table and populates it with sample data.
+3. `select_accounts` function - queries the data with SQL `SELECT` statements.
+4. `transfer_money_between_accounts` function - updates records consistently with distributed transactions.
 
 ## Questions or Issues?
 
