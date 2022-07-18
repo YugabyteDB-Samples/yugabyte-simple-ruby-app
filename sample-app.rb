@@ -6,12 +6,12 @@ def connect()
     puts ">>>> Connecting to YugabyteDB!\n";
 
     conn = PG.connect(
-        host: '',
+        host: '127.0.0.1',
         port: '5433',
         dbname: 'yugabyte',
-        user: '',
-        password: '',
-        sslmode: 'verify-full',
+        user: 'yugabyte',
+        password: 'yugabyte',
+        sslmode: 'disable',
         sslrootcert: ''
         );
 
@@ -63,7 +63,7 @@ def transfer_money_between_accounts(conn, amount)
 
     rescue PG::TRSerializationFailure => e
         puts "The operation is aborted due to a concurrent transaction that is modifying the same set of rows. \
-              Consider adding retry logic for production-grade applications.";
+              Consider adding retry logic or using the pessimistic locking.";
         raise
     end
 end
