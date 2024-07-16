@@ -1,7 +1,7 @@
 # Simple Ruby Application for YugabyteDB
 
 This application connects to your YugabyteDB instance via the 
-[Ruby Pg](https://github.com/ged/ruby-pg) driver for PostgreSQL and performs basic SQL operations. The instructions below are provided for [YugabyteDB Managed](https://cloud.yugabyte.com/) deployments. 
+[Ruby Pg](https://github.com/ged/ruby-pg) driver for PostgreSQL and performs basic SQL operations. The instructions below are provided for [YugabyteDB Aeon](https://cloud.yugabyte.com/) deployments. 
 If you use a different type of deployment, then update the `sample-app.rb` file with proper connection parameters.
 
 ## Prerequisites
@@ -12,9 +12,9 @@ If you use a different type of deployment, then update the `sample-app.rb` file 
 * [Ruby Pg](https://github.com/ged/ruby-pg) - the official Ruby driver for PostgreSQL.
 * Command line tool or your favourite IDE, such as Visual Studio Code.
 
-## Start YugabyteDB Managed Cluster
+## Start YugabyteDB Aeon Cluster
 
-* [Start YugabyteDB Managed](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. You can use
+* [Start YugabyteDB Aeon](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. You can use
 the free tier at no cost.
 * Add an IP address of your machine/laptop to the [IP allow list](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-secure-clusters/add-connections/#manage-ip-allow-lists)
 
@@ -23,7 +23,7 @@ the free tier at no cost.
 Clone the repository and change dirs into it:
 
 ```bash
-git clone https://github.com/yugabyte/yugabyte-simple-ruby-app && cd yugabyte-simple-ruby-app
+git clone https://github.com/YugabyteDB-Samples/yugabyte-simple-ruby-app.git && cd yugabyte-simple-ruby-app
 ```
 
 ## Provide Cluster Connection Parameters
@@ -32,10 +32,10 @@ Locate and define the following connection parameters in the `sample-app.rb` fil
 * `host` - the hostname of your instance.
 * `user` - the username for your database.
 * `password` - the password for your database.
-* `sslmode`  - an SSL mode. Make sure it's set to `verify-full` for YugabyteDB Managed.
+* `sslmode`  - an SSL mode. Make sure it's set to `verify-full` for YugabyteDB Aeon.
 * `sslrootcert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`). 
 
-Note, you can easily find all the settings on the YugabyteDB Managed dashboard:
+Note, you can easily find all the settings on the YugabyteDB Aeon dashboard:
 
 ![image](resources/cloud-app-settings.png)
 
